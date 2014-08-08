@@ -1323,7 +1323,7 @@ limitations under the License.
 *
 */
 
-[_input="radio"] input[type="radio"] {
+[_input~="radio"] input[type="radio"] {
   position: absolute;
   overflow: hidden;
   padding: 0;
@@ -1334,7 +1334,7 @@ limitations under the License.
   outline: none;
 }
 
-[_input="checkmark"] {
+[_input~="checkmark"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
@@ -1348,7 +1348,7 @@ limitations under the License.
   user-select: none;
 }
 
-[_input="radio"] {
+[_input~="radio"] {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -1359,14 +1359,14 @@ limitations under the License.
   user-select: none;
 }
 
-[_input="checkmark"]:before,
-[_input="checkmark"]:after {
+[_input~="checkmark"]:before,
+[_input~="checkmark"]:after {
   content: '';
   position: absolute;
   border-radius: 100%;
 }
 
-[_input="checkmark"]:after {
+[_input~="checkmark"]:after {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1374,13 +1374,13 @@ limitations under the License.
   transform: translate(-50%, -50%);
 }
 
-[_input="checkmark"]:before {
+[_input~="checkmark"]:before {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
 }
 
-[_input="checkmark"]:disabled {
+[_input~="checkmark"]:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -1467,7 +1467,7 @@ limitations under the License.
     - Radio
 */
 
-[_input="radio"] input[type="radio"] {
+[_input~="radio"] input[type="radio"] {
   height: 1.063rem;
   width: 1.063rem;
   margin-top: 0;
@@ -1476,7 +1476,7 @@ limitations under the License.
   margin-left: 0;
 }
 
-input[type="radio"]:checked + [_input="checkmark"]:after {
+input[type="radio"]:checked + [_input~="checkmark"]:after {
   opacity: 1;
 }
 
@@ -1485,7 +1485,7 @@ input[type="radio"]:checked + [_input="checkmark"]:after {
   line-height: 1.063rem;
 }
 
-[_input="checkmark"]:before {
+[_input~="checkmark"]:before {
   width: 1.063rem;
   height: 1.063rem;
   background: #e5e9e8;
@@ -1493,13 +1493,13 @@ input[type="radio"]:checked + [_input="checkmark"]:after {
   box-shadow: inset 0 1px #fff;
 }
 
-[_input="checkmark"] {
+[_input~="checkmark"] {
   position: relative;
   width: 1.063rem;
   height: 1.063rem;
 }
 
-[_input="checkmark"]:after {
+[_input~="checkmark"]:after {
   opacity: 0.1234567;
   width: 0.313rem;
   height: 0.313rem;
@@ -1513,24 +1513,24 @@ input[type="radio"]:checked + [_input="checkmark"]:after {
   left: 0.313rem;
 }
 
-input[type="radio"]:focus + [_input="checkmark"]:before {
+input[type="radio"]:focus + [_input~="checkmark"]:before {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
 }
 
-input[type="radio"]:active + [_input="checkmark"]:before {
+input[type="radio"]:active + [_input~="checkmark"]:before {
   border: 1px solid #9daca9;
   background-color: #d2d6d6;
   box-shadow: inset 0 1px rgba(0,0,0,0.1);
 }
 
-input[type="radio"]:disabled + [_input="checkmark"] {
+input[type="radio"]:disabled + [_input~="checkmark"] {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
 }
 
-input[type="radio"]:disabled:active + [_input="checkmark"]:before {
+input[type="radio"]:disabled:active + [_input~="checkmark"]:before {
   border: 1px solid #9daca9;
   background: #e5e9e8;
   box-shadow: inset 0 1px #fff;
@@ -1566,7 +1566,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-[_input="range"] {
+[_input~="range"] {
   padding: 0;
   margin: 0;
   font: inherit;
@@ -1581,7 +1581,7 @@ limitations under the License.
   -webkit-appearance: none;
 }
 
-[_input="range"]:disabled {
+[_input~="range"]:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -1638,7 +1638,7 @@ limitations under the License.
     - range
 */
 
-[_input="range"] {
+[_input~="range"] {
   border-radius: 4px;
   border: 1px solid #9daca9;
   background-color: #d6dcdb;
@@ -1646,7 +1646,7 @@ limitations under the License.
   border-radius: 15px;
 }
 
-[_input="range"]::-moz-range-track {
+[_input~="range"]::-moz-range-track {
   border-radius: 4px;
   border: 1px solid #9daca9;
   background-color: #d6dcdb;
@@ -1654,7 +1654,7 @@ limitations under the License.
   border-radius: 15px;
 }
 
-[_input="range"]::-webkit-slider-thumb {
+[_input~="range"]::-webkit-slider-thumb {
   cursor: pointer;
   -webkit-appearance: none;
   height: 1.313rem;
@@ -1665,7 +1665,7 @@ limitations under the License.
   box-shadow: inset 0 1px #fff;
 }
 
-[_input="range"]::-moz-range-thumb {
+[_input~="range"]::-moz-range-thumb {
   cursor: pointer;
   height: 1.313rem;
   width: 0.75rem;
@@ -1675,22 +1675,22 @@ limitations under the License.
   box-shadow: inset 0 1px #fff;
 }
 
-[_input="range"]:focus::-webkit-slider-thumb {
+[_input~="range"]:focus::-webkit-slider-thumb {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
 }
 
-[_input="range"]:focus::-moz-range-thumb {
+[_input~="range"]:focus::-moz-range-thumb {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
 }
 
-[_input="range"]:active::-webkit-slider-thumb {
+[_input~="range"]:active::-webkit-slider-thumb {
   border: 1px solid #9daca9;
   box-shadow: inset 0 1px #fff;
 }
 
-[_input="range"]:active::-moz-range-thumb {
+[_input~="range"]:active::-moz-range-thumb {
   border: 1px solid #9daca9;
   box-shadow: inset 0 1px #fff;
 }
@@ -2268,18 +2268,18 @@ input[type="search"]::-webkit-search-cancel-button {
   modifiers:
     :disabled: Disabled state
   markup:
-    <div class="topcoat-tab-bar">
-      <label class="topcoat-tab-bar__item">
+    <div _ButtonBar="tab">
+      <label _ButtonBar-Item>
         <input type="radio" name="tab-bar">
-        <button class="topcoat-tab-bar__button">One</button>
+        <button _Button>One</button>
       </label>
-      <label class="topcoat-tab-bar__item">
+      <label _ButtonBar-Item>
         <input type="radio" name="tab-bar">
-        <button class="topcoat-tab-bar__button">Two</button>
+        <button _Button>Two</button>
       </label>
-      <label class="topcoat-tab-bar__item">
+      <label _ButtonBar-Item>
         <input type="radio" name="tab-bar">
-        <button class="topcoat-tab-bar__button">Three</button>
+        <button _Button>Three</button>
       </label>
     </div>
   examples:
@@ -2307,16 +2307,14 @@ input[type="search"]::-webkit-search-cancel-button {
   border-top: 1px solid #9daca9;
 }
 
-.topcoat-tab-bar__button:active,
-.topcoat-tab-bar__button--large:active,
-:checked + .topcoat-tab-bar__button {
+[_ButtonBar~="tab"] [_Button]:active,
+[_ButtonBar~="tab"] :checked + [_Button] {
   color: #288edf;
   background-color: #e5f1fb;
   box-shadow: inset 0 0 1px rgba(0,0,0,0.1);
 }
 
-.topcoat-tab-bar__button:focus,
-.topcoat-tab-bar__button--large:focus {
+[_ButtonBar~="tab"] [_Button]:focus {
   z-index: 1;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   outline: 0;

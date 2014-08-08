@@ -1265,7 +1265,7 @@ limitations under the License.
 *
 */
 
-[_input=&quot;radio&quot;] input[type=&quot;radio&quot;] {
+[_input~=&quot;radio&quot;] input[type=&quot;radio&quot;] {
   position: absolute;
   overflow: hidden;
   padding: 0;
@@ -1276,7 +1276,7 @@ limitations under the License.
   outline: none;
 }
 
-[_input=&quot;checkmark&quot;] {
+[_input~=&quot;checkmark&quot;] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
@@ -1290,7 +1290,7 @@ limitations under the License.
   user-select: none;
 }
 
-[_input=&quot;radio&quot;] {
+[_input~=&quot;radio&quot;] {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -1301,14 +1301,14 @@ limitations under the License.
   user-select: none;
 }
 
-[_input=&quot;checkmark&quot;]:before,
-[_input=&quot;checkmark&quot;]:after {
+[_input~=&quot;checkmark&quot;]:before,
+[_input~=&quot;checkmark&quot;]:after {
   content: '';
   position: absolute;
   border-radius: 100%;
 }
 
-[_input=&quot;checkmark&quot;]:after {
+[_input~=&quot;checkmark&quot;]:after {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1316,13 +1316,13 @@ limitations under the License.
   transform: translate(-50%, -50%);
 }
 
-[_input=&quot;checkmark&quot;]:before {
+[_input~=&quot;checkmark&quot;]:before {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
 }
 
-[_input=&quot;checkmark&quot;]:disabled {
+[_input~=&quot;checkmark&quot;]:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -1391,7 +1391,7 @@ limitations under the License.
                 <div>
                   <h3>CSS</h3>
                   <pre class="css"><code data-language="css">
-[_input=&quot;radio&quot;] input[type=&quot;radio&quot;] {
+[_input~=&quot;radio&quot;] input[type=&quot;radio&quot;] {
   height: 1.063rem;
   width: 1.063rem;
   margin-top: 0;
@@ -1400,7 +1400,7 @@ limitations under the License.
   margin-left: 0;
 }
 
-input[type=&quot;radio&quot;]:checked + [_input=&quot;checkmark&quot;]:after {
+input[type=&quot;radio&quot;]:checked + [_input~=&quot;checkmark&quot;]:after {
   opacity: 1;
 }
 
@@ -1409,7 +1409,7 @@ input[type=&quot;radio&quot;]:checked + [_input=&quot;checkmark&quot;]:after {
   line-height: 1.063rem;
 }
 
-[_input=&quot;checkmark&quot;]:before {
+[_input~=&quot;checkmark&quot;]:before {
   width: 1.063rem;
   height: 1.063rem;
   background: #e5e9e8;
@@ -1417,13 +1417,13 @@ input[type=&quot;radio&quot;]:checked + [_input=&quot;checkmark&quot;]:after {
   box-shadow: inset 0 1px #fff;
 }
 
-[_input=&quot;checkmark&quot;] {
+[_input~=&quot;checkmark&quot;] {
   position: relative;
   width: 1.063rem;
   height: 1.063rem;
 }
 
-[_input=&quot;checkmark&quot;]:after {
+[_input~=&quot;checkmark&quot;]:after {
   opacity: 0.1234567;
   width: 0.313rem;
   height: 0.313rem;
@@ -1437,24 +1437,24 @@ input[type=&quot;radio&quot;]:checked + [_input=&quot;checkmark&quot;]:after {
   left: 0.313rem;
 }
 
-input[type=&quot;radio&quot;]:focus + [_input=&quot;checkmark&quot;]:before {
+input[type=&quot;radio&quot;]:focus + [_input~=&quot;checkmark&quot;]:before {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
 }
 
-input[type=&quot;radio&quot;]:active + [_input=&quot;checkmark&quot;]:before {
+input[type=&quot;radio&quot;]:active + [_input~=&quot;checkmark&quot;]:before {
   border: 1px solid #9daca9;
   background-color: #d2d6d6;
   box-shadow: inset 0 1px rgba(0,0,0,0.1);
 }
 
-input[type=&quot;radio&quot;]:disabled + [_input=&quot;checkmark&quot;] {
+input[type=&quot;radio&quot;]:disabled + [_input~=&quot;checkmark&quot;] {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
 }
 
-input[type=&quot;radio&quot;]:disabled:active + [_input=&quot;checkmark&quot;]:before {
+input[type=&quot;radio&quot;]:disabled:active + [_input~=&quot;checkmark&quot;]:before {
   border: 1px solid #9daca9;
   background: #e5e9e8;
   box-shadow: inset 0 1px #fff;
@@ -1490,7 +1490,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-[_input=&quot;range&quot;] {
+[_input~=&quot;range&quot;] {
   padding: 0;
   margin: 0;
   font: inherit;
@@ -1505,7 +1505,7 @@ limitations under the License.
   -webkit-appearance: none;
 }
 
-[_input=&quot;range&quot;]:disabled {
+[_input~=&quot;range&quot;]:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -1568,7 +1568,7 @@ limitations under the License.
                 <div>
                   <h3>CSS</h3>
                   <pre class="css"><code data-language="css">
-[_input=&quot;range&quot;] {
+[_input~=&quot;range&quot;] {
   border-radius: 4px;
   border: 1px solid #9daca9;
   background-color: #d6dcdb;
@@ -1576,7 +1576,7 @@ limitations under the License.
   border-radius: 15px;
 }
 
-[_input=&quot;range&quot;]::-moz-range-track {
+[_input~=&quot;range&quot;]::-moz-range-track {
   border-radius: 4px;
   border: 1px solid #9daca9;
   background-color: #d6dcdb;
@@ -1584,7 +1584,7 @@ limitations under the License.
   border-radius: 15px;
 }
 
-[_input=&quot;range&quot;]::-webkit-slider-thumb {
+[_input~=&quot;range&quot;]::-webkit-slider-thumb {
   cursor: pointer;
   -webkit-appearance: none;
   height: 1.313rem;
@@ -1595,7 +1595,7 @@ limitations under the License.
   box-shadow: inset 0 1px #fff;
 }
 
-[_input=&quot;range&quot;]::-moz-range-thumb {
+[_input~=&quot;range&quot;]::-moz-range-thumb {
   cursor: pointer;
   height: 1.313rem;
   width: 0.75rem;
@@ -1605,22 +1605,22 @@ limitations under the License.
   box-shadow: inset 0 1px #fff;
 }
 
-[_input=&quot;range&quot;]:focus::-webkit-slider-thumb {
+[_input~=&quot;range&quot;]:focus::-webkit-slider-thumb {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
 }
 
-[_input=&quot;range&quot;]:focus::-moz-range-thumb {
+[_input~=&quot;range&quot;]:focus::-moz-range-thumb {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
 }
 
-[_input=&quot;range&quot;]:active::-webkit-slider-thumb {
+[_input~=&quot;range&quot;]:active::-webkit-slider-thumb {
   border: 1px solid #9daca9;
   box-shadow: inset 0 1px #fff;
 }
 
-[_input=&quot;range&quot;]:active::-moz-range-thumb {
+[_input~=&quot;range&quot;]:active::-moz-range-thumb {
   border: 1px solid #9daca9;
   box-shadow: inset 0 1px #fff;
 }
@@ -2194,7 +2194,7 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
             <header>
               <h2>Tab Bar</h2>
             </header>
-            <section class="component"><div class="topcoat-tab-bar">  <label class="topcoat-tab-bar__item">    <input type="radio" name="tab-bar">    <button class="topcoat-tab-bar__button">One</button>  </label>  <label class="topcoat-tab-bar__item">    <input type="radio" name="tab-bar">    <button class="topcoat-tab-bar__button">Two</button>  </label>  <label class="topcoat-tab-bar__item">    <input type="radio" name="tab-bar">    <button class="topcoat-tab-bar__button">Three</button>  </label></div></section>
+            <section class="component"><div _ButtonBar="tab">  <label _ButtonBar-Item>    <input type="radio" name="tab-bar">    <button _Button>One</button>  </label>  <label _ButtonBar-Item>    <input type="radio" name="tab-bar">    <button _Button>Two</button>  </label>  <label _ButtonBar-Item>    <input type="radio" name="tab-bar">    <button _Button>Three</button>  </label></div></section>
             <section class="examples">
               <h4>Examples</h4>
               <ul>
@@ -2206,7 +2206,7 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;div class=&quot;topcoat-tab-bar&quot;&gt;  &lt;label class=&quot;topcoat-tab-bar__item&quot;&gt;    &lt;input type=&quot;radio&quot; name=&quot;tab-bar&quot;&gt;    &lt;button class=&quot;topcoat-tab-bar__button&quot;&gt;One&lt;/button&gt;  &lt;/label&gt;  &lt;label class=&quot;topcoat-tab-bar__item&quot;&gt;    &lt;input type=&quot;radio&quot; name=&quot;tab-bar&quot;&gt;    &lt;button class=&quot;topcoat-tab-bar__button&quot;&gt;Two&lt;/button&gt;  &lt;/label&gt;  &lt;label class=&quot;topcoat-tab-bar__item&quot;&gt;    &lt;input type=&quot;radio&quot; name=&quot;tab-bar&quot;&gt;    &lt;button class=&quot;topcoat-tab-bar__button&quot;&gt;Three&lt;/button&gt;  &lt;/label&gt;&lt;/div&gt;</code></pre>
+                  <pre class="html"><code data-language="html">&lt;div _ButtonBar=&quot;tab&quot;&gt;  &lt;label _ButtonBar-Item&gt;    &lt;input type=&quot;radio&quot; name=&quot;tab-bar&quot;&gt;    &lt;button _Button&gt;One&lt;/button&gt;  &lt;/label&gt;  &lt;label _ButtonBar-Item&gt;    &lt;input type=&quot;radio&quot; name=&quot;tab-bar&quot;&gt;    &lt;button _Button&gt;Two&lt;/button&gt;  &lt;/label&gt;  &lt;label _ButtonBar-Item&gt;    &lt;input type=&quot;radio&quot; name=&quot;tab-bar&quot;&gt;    &lt;button _Button&gt;Three&lt;/button&gt;  &lt;/label&gt;&lt;/div&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -2224,16 +2224,14 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
   border-top: 1px solid #9daca9;
 }
 
-.topcoat-tab-bar__button:active,
-.topcoat-tab-bar__button--large:active,
-:checked + .topcoat-tab-bar__button {
+[_ButtonBar~=&quot;tab&quot;] [_Button]:active,
+[_ButtonBar~=&quot;tab&quot;] :checked + [_Button] {
   color: #288edf;
   background-color: #e5f1fb;
   box-shadow: inset 0 0 1px rgba(0,0,0,0.1);
 }
 
-.topcoat-tab-bar__button:focus,
-.topcoat-tab-bar__button--large:focus {
+[_ButtonBar~=&quot;tab&quot;] [_Button]:focus {
   z-index: 1;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   outline: 0;
