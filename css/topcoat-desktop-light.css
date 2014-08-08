@@ -105,7 +105,15 @@
 *
 */
 
-.button {
+.button,
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta,
+[_ButtonBar-Button],
+[_ButtonBar-Button~="large"] {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -143,7 +151,7 @@
 .topcoat-button--cta:disabled,
 .topcoat-button--large--cta:disabled,
 [_ButtonBar-Button]:disabled,
-[_ButtonBar-Button~="Large"]:disabled {
+[_ButtonBar-Button~="large"]:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -155,7 +163,8 @@
 .topcoat-button--large--quiet,
 .topcoat-button--cta,
 .topcoat-button--large--cta,
-[_ButtonBar-Button~="Large"] {
+[_ButtonBar-Button],
+[_ButtonBar-Button~="large"] {
   padding: 0 0.563rem;
   font-size: 12px;
   line-height: 1.313rem;
@@ -174,7 +183,7 @@
 .topcoat-button--large:hover,
 .topcoat-button--large--quiet:hover,
 [_ButtonBar-Button]:hover,
-[_ButtonBar-Button~="Large"]:hover {
+[_ButtonBar-Button~="large"]ge:hover {
   background-color: #eff1f1;
 }
 
@@ -186,8 +195,7 @@
 .topcoat-button--large--quiet:hover:focus,
 .topcoat-button--cta:focus,
 .topcoat-button--large--cta:focus,
-[_ButtonBar-Button]:focus,
-[_ButtonBar-Button]--large:focus {
+[_ButtonBar-Button]:focus {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   outline: 0;
@@ -196,7 +204,6 @@
 .topcoat-button:active,
 .topcoat-button--large:active,
 [_ButtonBar-Button]:active,
-[_ButtonBar-Button]--large:active,
 :checked + [_ButtonBar-Button] {
   border: 1px solid #9daca9;
   background-color: #d2d6d6;
@@ -229,7 +236,7 @@
 
 .topcoat-button--large,
 .topcoat-button--large--quiet,
-[_ButtonBar-Button~="Large"] {
+[_ButtonBar-Button~="large"] {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.688rem;
@@ -344,13 +351,11 @@
   border-bottom-right-radius: 4px;
 }
 
-[_ButtonBar-Item]:first-child > [_ButtonBar-Button],
-[_ButtonBar-Item]:first-child > [_ButtonBar-Button~="large"] {
+[_ButtonBar-Item]:first-child > [_ButtonBar-Button] {
   border-right: none;
 }
 
-[_ButtonBar-Item]:last-child > [_ButtonBar-Button],
-[_ButtonBar-Item]:last-child > [_ButtonBar-Button~="large"] {
+[_ButtonBar-Item]:last-child > [_ButtonBar-Button] {
   border-left: none;
 }
 
@@ -358,8 +363,7 @@
   border-radius: inherit;
 }
 
-[_ButtonBar-Button]:focus,
-[_ButtonBar-Button]--large:focus {
+[_ButtonBar-Button]:focus {
   z-index: 1;
 }
 
@@ -369,15 +373,15 @@
   modifiers:
     :disabled: Disabled state
   markup:
-    <div class="topcoat-button-bar">
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button--large">One</button>
+    <div _ButtonBar>
+      <div _ButtonBar-Item>
+        <button _ButtonBar-Button="large">One</button>
       </div>
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button--large">Two</button>
+      <div _ButtonBar-Item>
+        <button _ButtonBar-Button="large">Two</button>
       </div>
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button--large">Three</button>
+      <div _ButtonBar-Item>
+        <button _ButtonBar-Button="large">Three</button>
       </div>
     </div>
   tags:
@@ -391,7 +395,7 @@
     - large
 */
 
-[_ButtonBar-Button~="Large"] {
+[_ButtonBar-Button~="large"] {
   border-radius: inherit;
 }
 
@@ -503,7 +507,13 @@
 *
 */
 
-.button {
+.button,
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
   position: relative;
   display: inline-block;
   vertical-align: top;
