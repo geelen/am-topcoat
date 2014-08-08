@@ -1265,7 +1265,7 @@ limitations under the License.
 *
 */
 
-input[type=&quot;radio&quot;] {
+[_input=&quot;radio&quot;] input[type=&quot;radio&quot;] {
   position: absolute;
   overflow: hidden;
   padding: 0;
@@ -1276,7 +1276,7 @@ input[type=&quot;radio&quot;] {
   outline: none;
 }
 
-.radio-button {
+[_input=&quot;checkmark&quot;] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
@@ -1290,7 +1290,7 @@ input[type=&quot;radio&quot;] {
   user-select: none;
 }
 
-.radio-button__label {
+[_input=&quot;radio&quot;] {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -1301,14 +1301,14 @@ input[type=&quot;radio&quot;] {
   user-select: none;
 }
 
-.radio-button:before,
-.radio-button:after {
+[_input=&quot;checkmark&quot;]:before,
+[_input=&quot;checkmark&quot;]:after {
   content: '';
   position: absolute;
   border-radius: 100%;
 }
 
-.radio-button:after {
+[_input=&quot;checkmark&quot;]:after {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1316,13 +1316,13 @@ input[type=&quot;radio&quot;] {
   transform: translate(-50%, -50%);
 }
 
-.radio-button:before {
+[_input=&quot;checkmark&quot;]:before {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
 }
 
-.radio-button--disabled {
+[_input=&quot;checkmark&quot;]:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -1364,75 +1364,7 @@ input[type=&quot;radio&quot;] {
 *
 */
 
-input[type=&quot;radio&quot;] {
-  position: absolute;
-  overflow: hidden;
-  padding: 0;
-  border: 0;
-  opacity: 0.001;
-  z-index: 1;
-  vertical-align: top;
-  outline: none;
-}
-
-.radio-button,
-.topcoat-radio-button__checkmark {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-clip: padding-box;
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.radio-button__label,
-.topcoat-radio-button {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.radio-button:before,
-.radio-button:after,
-.topcoat-radio-button__checkmark:before,
-.topcoat-radio-button__checkmark:after {
-  content: '';
-  position: absolute;
-  border-radius: 100%;
-}
-
-.radio-button:after,
-.topcoat-radio-button__checkmark:after {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.radio-button:before,
-.topcoat-radio-button__checkmark:before {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-clip: padding-box;
-}
-
-.radio-button--disabled,
-input[type=&quot;radio&quot;]:disabled + .topcoat-radio-button__checkmark {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
+/*@import radio-button*/
 </code></pre>
                 </div>
               </section>
@@ -1442,7 +1374,7 @@ input[type=&quot;radio&quot;]:disabled + .topcoat-radio-button__checkmark {
             <header>
               <h2>Radio Button</h2>
             </header>
-            <section class="component"><!-- NO LABEL --><label class="topcoat-radio-button">  <input type="radio" name="topcoat">  <div class="topcoat-radio-button__checkmark"></div></label><br><br><!-- LEFT LABEL --><label class="topcoat-radio-button">  Left label  <input type="radio" name="topcoat">  <div class="topcoat-radio-button__checkmark"></div></label><br><br><!-- RIGHT LABEL --><label class="topcoat-radio-button">  <input type="radio" name="topcoat">  <div class="topcoat-radio-button__checkmark"></div>  Right label</label><br><br><!-- DISABLED --><label class="topcoat-radio-button">  <input type="radio" name="topcoat" Disabled>  <div class="topcoat-radio-button__checkmark"></div>  Disabled</label></section>
+            <section class="component"><!-- NO LABEL --><label _input="radio">  <input type="radio" name="topcoat">  <div _input="checkmark"></div></label><br><br><!-- LEFT LABEL --><label _input="radio">  Left label  <input type="radio" name="topcoat">  <div _input="checkmark"></div></label><br><br><!-- RIGHT LABEL --><label _input="radio">  <input type="radio" name="topcoat">  <div _input="checkmark"></div>  Right label</label><br><br><!-- DISABLED --><label _input="radio">  <input type="radio" name="topcoat" Disabled>  <div _input="checkmark"></div>  Disabled</label></section>
             <section class="examples">
               <h4>Examples</h4>
               <ul>
@@ -1454,12 +1386,12 @@ input[type=&quot;radio&quot;]:disabled + .topcoat-radio-button__checkmark {
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;!-- NO LABEL --&gt;&lt;label class=&quot;topcoat-radio-button&quot;&gt;  &lt;input type=&quot;radio&quot; name=&quot;topcoat&quot;&gt;  &lt;div class=&quot;topcoat-radio-button__checkmark&quot;&gt;&lt;/div&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;!-- LEFT LABEL --&gt;&lt;label class=&quot;topcoat-radio-button&quot;&gt;  Left label  &lt;input type=&quot;radio&quot; name=&quot;topcoat&quot;&gt;  &lt;div class=&quot;topcoat-radio-button__checkmark&quot;&gt;&lt;/div&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;!-- RIGHT LABEL --&gt;&lt;label class=&quot;topcoat-radio-button&quot;&gt;  &lt;input type=&quot;radio&quot; name=&quot;topcoat&quot;&gt;  &lt;div class=&quot;topcoat-radio-button__checkmark&quot;&gt;&lt;/div&gt;  Right label&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;!-- DISABLED --&gt;&lt;label class=&quot;topcoat-radio-button&quot;&gt;  &lt;input type=&quot;radio&quot; name=&quot;topcoat&quot; Disabled&gt;  &lt;div class=&quot;topcoat-radio-button__checkmark&quot;&gt;&lt;/div&gt;  Disabled&lt;/label&gt;</code></pre>
+                  <pre class="html"><code data-language="html">&lt;!-- NO LABEL --&gt;&lt;label _input=&quot;radio&quot;&gt;  &lt;input type=&quot;radio&quot; name=&quot;topcoat&quot;&gt;  &lt;div _input=&quot;checkmark&quot;&gt;&lt;/div&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;!-- LEFT LABEL --&gt;&lt;label _input=&quot;radio&quot;&gt;  Left label  &lt;input type=&quot;radio&quot; name=&quot;topcoat&quot;&gt;  &lt;div _input=&quot;checkmark&quot;&gt;&lt;/div&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;!-- RIGHT LABEL --&gt;&lt;label _input=&quot;radio&quot;&gt;  &lt;input type=&quot;radio&quot; name=&quot;topcoat&quot;&gt;  &lt;div _input=&quot;checkmark&quot;&gt;&lt;/div&gt;  Right label&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;!-- DISABLED --&gt;&lt;label _input=&quot;radio&quot;&gt;  &lt;input type=&quot;radio&quot; name=&quot;topcoat&quot; Disabled&gt;  &lt;div _input=&quot;checkmark&quot;&gt;&lt;/div&gt;  Disabled&lt;/label&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
                   <pre class="css"><code data-language="css">
-input[type=&quot;radio&quot;] {
+[_input=&quot;radio&quot;] input[type=&quot;radio&quot;] {
   height: 1.063rem;
   width: 1.063rem;
   margin-top: 0;
@@ -1468,16 +1400,16 @@ input[type=&quot;radio&quot;] {
   margin-left: 0;
 }
 
-input[type=&quot;radio&quot;]:checked + .topcoat-radio-button__checkmark:after {
+input[type=&quot;radio&quot;]:checked + [_input=&quot;checkmark&quot;]:after {
   opacity: 1;
 }
 
-.topcoat-radio-button {
+[_input=&quot;radio&quot;] {
   color: #454545;
   line-height: 1.063rem;
 }
 
-.topcoat-radio-button__checkmark:before {
+[_input=&quot;checkmark&quot;]:before {
   width: 1.063rem;
   height: 1.063rem;
   background: #e5e9e8;
@@ -1485,13 +1417,13 @@ input[type=&quot;radio&quot;]:checked + .topcoat-radio-button__checkmark:after {
   box-shadow: inset 0 1px #fff;
 }
 
-.topcoat-radio-button__checkmark {
+[_input=&quot;checkmark&quot;] {
   position: relative;
   width: 1.063rem;
   height: 1.063rem;
 }
 
-.topcoat-radio-button__checkmark:after {
+[_input=&quot;checkmark&quot;]:after {
   opacity: 0.1234567;
   width: 0.313rem;
   height: 0.313rem;
@@ -1505,18 +1437,24 @@ input[type=&quot;radio&quot;]:checked + .topcoat-radio-button__checkmark:after {
   left: 0.313rem;
 }
 
-input[type=&quot;radio&quot;]:focus + .topcoat-radio-button__checkmark:before {
+input[type=&quot;radio&quot;]:focus + [_input=&quot;checkmark&quot;]:before {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
 }
 
-input[type=&quot;radio&quot;]:active + .topcoat-radio-button__checkmark:before {
+input[type=&quot;radio&quot;]:active + [_input=&quot;checkmark&quot;]:before {
   border: 1px solid #9daca9;
   background-color: #d2d6d6;
   box-shadow: inset 0 1px rgba(0,0,0,0.1);
 }
 
-input[type=&quot;radio&quot;]:disabled:active + .topcoat-radio-button__checkmark:before {
+input[type=&quot;radio&quot;]:disabled + [_input=&quot;checkmark&quot;] {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+input[type=&quot;radio&quot;]:disabled:active + [_input=&quot;checkmark&quot;]:before {
   border: 1px solid #9daca9;
   background: #e5e9e8;
   box-shadow: inset 0 1px #fff;
