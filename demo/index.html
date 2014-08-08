@@ -268,53 +268,7 @@
 *
 */
 
-[_Button] {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-clip: padding-box;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  text-decoration: none;
-  padding: 0 0.563rem;
-  font-size: 12px;
-  line-height: 1.313rem;
-  letter-spacing: 0;
-  color: #454545;
-  text-shadow: 0 1px #fff;
-  vertical-align: top;
-  background-color: #e5e9e8;
-  box-shadow: inset 0 1px #fff;
-  border: 1px solid #9daca9;
-  border-radius: 4px;
-}
-
-[_Button~=&quot;quiet&quot;] {
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-
-[_Button]:disabled,
-[_Button~=&quot;disabled&quot;] {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
+/*@import button*/
 </code></pre>
                 </div>
               </section>
@@ -410,7 +364,7 @@
                 <div>
                   <h3>CSS</h3>
                   <pre class="css"><code data-language="css">
-[_Button~=&quot;large&quot;][_Button~=&quot;large&quot;] {
+[_Button~=&quot;large&quot;] {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.688rem;
@@ -808,61 +762,7 @@ input[type=&quot;checkbox&quot;]:disabled:active + .topcoat-checkbox__checkmark:
 *
 */
 
-[_Button],
-.topcoat-icon-button,
-.topcoat-icon-button--quiet,
-.topcoat-icon-button--large,
-.topcoat-icon-button--large--quiet {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-clip: padding-box;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  text-decoration: none;
-  padding: 0 0.563rem;
-  font-size: 12px;
-  line-height: 1.313rem;
-  letter-spacing: 0;
-  color: #454545;
-  text-shadow: 0 1px #fff;
-  vertical-align: top;
-  background-color: #e5e9e8;
-  box-shadow: inset 0 1px #fff;
-  border: 1px solid #9daca9;
-  border-radius: 4px;
-}
-
-[_Button~=&quot;quiet&quot;] {
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-
-[_Button]:disabled,
-[_Button~=&quot;disabled&quot;],
-.topcoat-icon-button:disabled,
-.topcoat-icon-button--quiet:disabled,
-.topcoat-icon-button--large:disabled,
-.topcoat-icon-button--large--quiet:disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
+/*@import button*/
 </code></pre>
                 </div>
               </section>
@@ -887,6 +787,7 @@ input[type=&quot;checkbox&quot;]:disabled:active + .topcoat-checkbox__checkmark:
 .topcoat-icon-button--quiet,
 .topcoat-icon-button--large,
 .topcoat-icon-button--large--quiet {
+  /*@extend [_Button]*/
   padding: 0 0.25rem;
   line-height: 1.313rem;
   letter-spacing: 0;
@@ -1008,9 +909,6 @@ input[type=&quot;checkbox&quot;]:disabled:active + .topcoat-checkbox__checkmark:
                   <pre class="css"><code data-language="css">
 .topcoat-icon,
 .topcoat-icon--large {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
   overflow: hidden;
   width: 0.81406rem;
   height: 0.81406rem;
@@ -2424,89 +2322,9 @@ input[type=&quot;search&quot;]::-webkit-search-cancel-button {
 *
 */
 
-[_Button] {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-clip: padding-box;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  text-decoration: none;
-  padding: 0 0.563rem;
-  font-size: 12px;
-  line-height: 1.313rem;
-  letter-spacing: 0;
-  color: #454545;
-  text-shadow: 0 1px #fff;
-  vertical-align: top;
-  background-color: #e5e9e8;
-  box-shadow: inset 0 1px #fff;
-  border: 1px solid #9daca9;
-  border-radius: 4px;
-}
+/*@import button*/
 
-[_Button~=&quot;quiet&quot;] {
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-
-[_Button]:disabled,
-[_Button~=&quot;disabled&quot;],
-.topcoat-tab-bar__button:disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
-
-[_ButtonBar] {
-  display: table;
-  table-layout: fixed;
-  white-space: nowrap;
-  margin: 0;
-  padding: 0;
-}
-
-[_ButtonBar-Item] {
-  display: table-cell;
-  width: auto;
-  border-radius: 0;
-}
-
-[_ButtonBar-Item] &gt; input {
-  position: absolute;
-  overflow: hidden;
-  padding: 0;
-  border: 0;
-  opacity: 0.001;
-  z-index: 1;
-  vertical-align: top;
-  outline: none;
-}
-
-[_ButtonBar-Button] {
-  border-radius: inherit;
-}
-
-[_ButtonBar-Item]:disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
+/*@import button-bar*/
 </code></pre>
                 </div>
               </section>
