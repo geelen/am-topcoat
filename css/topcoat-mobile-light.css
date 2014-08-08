@@ -105,15 +105,7 @@
 *
 */
 
-.button,
-.topcoat-button,
-.topcoat-button--quiet,
-.topcoat-button--large,
-.topcoat-button--large--quiet,
-.topcoat-button--cta,
-.topcoat-button--large--cta,
-.topcoat-button-bar__button,
-.topcoat-button-bar__button--large {
+.button {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -163,7 +155,6 @@
 .topcoat-button--large--quiet,
 .topcoat-button--cta,
 .topcoat-button--large--cta,
-.topcoat-button-bar__button,
 .topcoat-button-bar__button--large {
   padding: 0 1.25rem;
   font-size: 16px;
@@ -280,7 +271,7 @@
 }
 
 .button-bar,
-.topcoat-button-bar {
+[topcoat-button-bar] {
   display: table;
   table-layout: fixed;
   white-space: nowrap;
@@ -318,12 +309,12 @@
 }
 
 /* topdoc
-  name: Button Bar
+  name: Button Bar2
   description: Component of grouped buttons
   modifiers:
     :disabled: Disabled state
   markup:
-    <div class="topcoat-button-bar">
+    <div topcoat-button-bar>
       <div class="topcoat-button-bar__item">
         <button class="topcoat-button-bar__button">One</button>
       </div>
@@ -515,13 +506,7 @@
 *
 */
 
-.button,
-.topcoat-button,
-.topcoat-button--quiet,
-.topcoat-button--large,
-.topcoat-button--large--quiet,
-.topcoat-button--cta,
-.topcoat-button--large--cta {
+.button {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -2217,7 +2202,7 @@ input[type="radio"]:checked + .topcoat-radio-button__checkmark:after {
 }
 
 .topcoat-radio-button__checkmark:after {
-  opacity: 0;
+  opacity: 0.1234567;
   width: 0.875rem;
   height: 0.875rem;
   background: #454545;

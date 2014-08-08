@@ -16,7 +16,7 @@
 *
 */
 
-.button-bar {
+[_ButtonBar] {
   display: table;
   table-layout: fixed;
   white-space: nowrap;
@@ -24,13 +24,13 @@
   padding: 0;
 }
 
-.button-bar__item {
+[_ButtonBar-Item] {
   display: table-cell;
   width: auto;
   border-radius: 0;
 }
 
-.button-bar__item > input {
+[_ButtonBar-Item] > input {
   position: absolute;
   overflow: hidden;
   padding: 0;
@@ -41,11 +41,11 @@
   outline: none;
 }
 
-.button-bar__button {
+[_ButtonBar-Button] {
   border-radius: inherit;
 }
 
-.button-bar__item:disabled {
+[_ButtonBar-Item]:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -105,15 +105,7 @@
 *
 */
 
-.button,
-.topcoat-button,
-.topcoat-button--quiet,
-.topcoat-button--large,
-.topcoat-button--large--quiet,
-.topcoat-button--cta,
-.topcoat-button--large--cta,
-.topcoat-button-bar__button,
-.topcoat-button-bar__button--large {
+.button {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -150,8 +142,8 @@
 .topcoat-button--large--quiet:disabled,
 .topcoat-button--cta:disabled,
 .topcoat-button--large--cta:disabled,
-.topcoat-button-bar__button:disabled,
-.topcoat-button-bar__button--large:disabled {
+[_ButtonBar-Button]:disabled,
+[_ButtonBar-Button~="Large"]:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -163,8 +155,7 @@
 .topcoat-button--large--quiet,
 .topcoat-button--cta,
 .topcoat-button--large--cta,
-.topcoat-button-bar__button,
-.topcoat-button-bar__button--large {
+[_ButtonBar-Button~="Large"] {
   padding: 0 0.563rem;
   font-size: 12px;
   line-height: 1.313rem;
@@ -182,8 +173,8 @@
 .topcoat-button--quiet:hover,
 .topcoat-button--large:hover,
 .topcoat-button--large--quiet:hover,
-.topcoat-button-bar__button:hover,
-.topcoat-button-bar__button--large:hover {
+[_ButtonBar-Button]:hover,
+[_ButtonBar-Button~="Large"]:hover {
   background-color: #eff1f1;
 }
 
@@ -195,8 +186,8 @@
 .topcoat-button--large--quiet:hover:focus,
 .topcoat-button--cta:focus,
 .topcoat-button--large--cta:focus,
-.topcoat-button-bar__button:focus,
-.topcoat-button-bar__button--large:focus {
+[_ButtonBar-Button]:focus,
+[_ButtonBar-Button]--large:focus {
   border: 1px solid #0036ff;
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   outline: 0;
@@ -204,9 +195,9 @@
 
 .topcoat-button:active,
 .topcoat-button--large:active,
-.topcoat-button-bar__button:active,
-.topcoat-button-bar__button--large:active,
-:checked + .topcoat-button-bar__button {
+[_ButtonBar-Button]:active,
+[_ButtonBar-Button]--large:active,
+:checked + [_ButtonBar-Button] {
   border: 1px solid #9daca9;
   background-color: #d2d6d6;
   box-shadow: inset 0 1px rgba(0,0,0,0.1);
@@ -238,7 +229,7 @@
 
 .topcoat-button--large,
 .topcoat-button--large--quiet,
-.topcoat-button-bar__button--large {
+[_ButtonBar-Button~="Large"] {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.688rem;
@@ -279,8 +270,7 @@
   padding: 0 0.875rem;
 }
 
-.button-bar,
-.topcoat-button-bar {
+[_ButtonBar] {
   display: table;
   table-layout: fixed;
   white-space: nowrap;
@@ -288,15 +278,13 @@
   padding: 0;
 }
 
-.button-bar__item,
-.topcoat-button-bar__item {
+[_ButtonBar-Item] {
   display: table-cell;
   width: auto;
   border-radius: 0;
 }
 
-.button-bar__item > input,
-.topcoat-button-bar__item > input {
+[_ButtonBar-Item] > input {
   position: absolute;
   overflow: hidden;
   padding: 0;
@@ -307,11 +295,11 @@
   outline: none;
 }
 
-.button-bar__button {
+[_ButtonBar-Button] {
   border-radius: inherit;
 }
 
-.button-bar__item:disabled {
+[_ButtonBar-Item]:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -323,15 +311,15 @@
   modifiers:
     :disabled: Disabled state
   markup:
-    <div class="topcoat-button-bar">
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button">One</button>
+    <div _ButtonBar>
+      <div _ButtonBar-Item>
+        <button _ButtonBar-Button>One</button>
       </div>
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button">Two</button>
+      <div _ButtonBar-Item>
+        <button _ButtonBar-Button>Two</button>
       </div>
-      <div class="topcoat-button-bar__item">
-        <button class="topcoat-button-bar__button">Three</button>
+      <div _ButtonBar-Item>
+        <button _ButtonBar-Button>Three</button>
       </div>
     </div>
   examples:
@@ -346,32 +334,32 @@
     - bar
 */
 
-.topcoat-button-bar > .topcoat-button-bar__item:first-child {
+[_ButtonBar] > [_ButtonBar-Item]:first-child {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
 
-.topcoat-button-bar > .topcoat-button-bar__item:last-child {
+[_ButtonBar] > [_ButtonBar-Item]:last-child {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 
-.topcoat-button-bar__item:first-child > .topcoat-button-bar__button,
-.topcoat-button-bar__item:first-child > .topcoat-button-bar__button--large {
+[_ButtonBar-Item]:first-child > [_ButtonBar-Button],
+[_ButtonBar-Item]:first-child > [_ButtonBar-Button~="large"] {
   border-right: none;
 }
 
-.topcoat-button-bar__item:last-child > .topcoat-button-bar__button,
-.topcoat-button-bar__item:last-child > .topcoat-button-bar__button--large {
+[_ButtonBar-Item]:last-child > [_ButtonBar-Button],
+[_ButtonBar-Item]:last-child > [_ButtonBar-Button~="large"] {
   border-left: none;
 }
 
-.topcoat-button-bar__button {
+[_ButtonBar-Button] {
   border-radius: inherit;
 }
 
-.topcoat-button-bar__button:focus,
-.topcoat-button-bar__button--large:focus {
+[_ButtonBar-Button]:focus,
+[_ButtonBar-Button]--large:focus {
   z-index: 1;
 }
 
@@ -403,7 +391,7 @@
     - large
 */
 
-.topcoat-button-bar__button--large {
+[_ButtonBar-Button~="Large"] {
   border-radius: inherit;
 }
 
@@ -515,13 +503,7 @@
 *
 */
 
-.button,
-.topcoat-button,
-.topcoat-button--quiet,
-.topcoat-button--large,
-.topcoat-button--large--quiet,
-.topcoat-button--cta,
-.topcoat-button--large--cta {
+.button {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -1967,7 +1949,7 @@ input[type="radio"]:checked + .topcoat-radio-button__checkmark:after {
 }
 
 .topcoat-radio-button__checkmark:after {
-  opacity: 0;
+  opacity: 0.1234567;
   width: 0.313rem;
   height: 0.313rem;
   background: #454545;
@@ -2757,8 +2739,7 @@ input[type="search"]::-webkit-search-cancel-button {
 *
 */
 
-.button,
-.topcoat-tab-bar__button {
+.button {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -2795,8 +2776,7 @@ input[type="search"]::-webkit-search-cancel-button {
   pointer-events: none;
 }
 
-.button-bar,
-.topcoat-tab-bar {
+[_ButtonBar] {
   display: table;
   table-layout: fixed;
   white-space: nowrap;
@@ -2804,15 +2784,13 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: 0;
 }
 
-.button-bar__item,
-.topcoat-tab-bar__item {
+[_ButtonBar-Item] {
   display: table-cell;
   width: auto;
   border-radius: 0;
 }
 
-.button-bar__item > input,
-.topcoat-tab-bar__item > input {
+[_ButtonBar-Item] > input {
   position: absolute;
   overflow: hidden;
   padding: 0;
@@ -2823,11 +2801,11 @@ input[type="search"]::-webkit-search-cancel-button {
   outline: none;
 }
 
-.button-bar__button {
+[_ButtonBar-Button] {
   border-radius: inherit;
 }
 
-.button-bar__item:disabled {
+[_ButtonBar-Item]:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -2865,7 +2843,7 @@ input[type="search"]::-webkit-search-cancel-button {
     - bar
 */
 
-.topcoat-tab-bar__button {
+[_ButtonBar~="tab"] [_ButtonBar-Item] {
   padding: 0 0.563rem;
   height: 1.313rem;
   line-height: 1.313rem;

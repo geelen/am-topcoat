@@ -33,7 +33,7 @@
           </div>
           <div id="pageNav">
             <ul>
-              <li><a href="#button-bar">Button Bar</a></li>
+              <li><a href="#button-bar2">Button Bar2</a></li>
               <li><a href="#large-buttonbar">Large Button Bar</a></li>
               <li><a href="#button">Button</a></li>
               <li><a href="#quiet-button">Quiet Button</a></li>
@@ -79,11 +79,11 @@
           </div>
         </header>
         <div id="content" class="max-width">
-          <article id="button-bar" class="component">
+          <article id="button-bar2" class="component">
             <header>
-              <h2>Button Bar</h2>
+              <h2>Button Bar2</h2>
             </header>
-            <section class="component"><div class="topcoat-button-bar">  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button">One</button>  </div>  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button">Two</button>  </div>  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button">Three</button>  </div></div></section>
+            <section class="component"><div topcoat-button-bar>  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button">One</button>  </div>  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button">Two</button>  </div>  <div class="topcoat-button-bar__item">    <button class="topcoat-button-bar__button">Three</button>  </div></div></section>
             <section class="examples">
               <h4>Examples</h4>
               <ul>
@@ -95,7 +95,7 @@
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;div class=&quot;topcoat-button-bar&quot;&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button&quot;&gt;One&lt;/button&gt;  &lt;/div&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button&quot;&gt;Two&lt;/button&gt;  &lt;/div&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button&quot;&gt;Three&lt;/button&gt;  &lt;/div&gt;&lt;/div&gt;</code></pre>
+                  <pre class="html"><code data-language="html">&lt;div topcoat-button-bar&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button&quot;&gt;One&lt;/button&gt;  &lt;/div&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button&quot;&gt;Two&lt;/button&gt;  &lt;/div&gt;  &lt;div class=&quot;topcoat-button-bar__item&quot;&gt;    &lt;button class=&quot;topcoat-button-bar__button&quot;&gt;Three&lt;/button&gt;  &lt;/div&gt;&lt;/div&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -260,13 +260,7 @@
 *
 */
 
-.button,
-.topcoat-button,
-.topcoat-button--quiet,
-.topcoat-button--large,
-.topcoat-button--large--quiet,
-.topcoat-button--cta,
-.topcoat-button--large--cta {
+.button {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -1682,7 +1676,7 @@ input[type=&quot;radio&quot;]:checked + .topcoat-radio-button__checkmark:after {
 }
 
 .topcoat-radio-button__checkmark:after {
-  opacity: 0;
+  opacity: 0.1234567;
   width: 0.313rem;
   height: 0.313rem;
   background: #c6c8c8;
