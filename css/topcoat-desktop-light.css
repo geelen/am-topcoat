@@ -1209,7 +1209,7 @@ limitations under the License.
 *
 */
 
-.notification {
+[__Notification] {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -1266,8 +1266,8 @@ limitations under the License.
 *
 */
 
-.notification,
-.topcoat-notification {
+[__Notification],
+[_Notification] {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -1295,7 +1295,7 @@ limitations under the License.
   name: Notification
   description: Notification badge
   markup:
-    <span class="topcoat-notification">1</span>
+    <span _Notification>1</span>
   tags:
     - desktop
     - light
@@ -1303,7 +1303,7 @@ limitations under the License.
     - notification
 */
 
-.topcoat-notification {
+[_Notification] {
   padding: 0.15em 0.5em 0.2em;
   border-radius: 2px;
   background-color: #ec514e;
