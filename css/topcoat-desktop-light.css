@@ -117,13 +117,13 @@
   markup:
     <div _ButtonBar>
       <div _ButtonBar-Item>
-        <button _ButtonBar-Button>One</button>
+        <button _Button>One</button>
       </div>
       <div _ButtonBar-Item>
-        <button _ButtonBar-Button>Two</button>
+        <button _Button>Two</button>
       </div>
       <div _ButtonBar-Item>
-        <button _ButtonBar-Button>Three</button>
+        <button _Button>Three</button>
       </div>
     </div>
   examples:
@@ -148,20 +148,20 @@
   border-bottom-right-radius: 4px;
 }
 
-[_ButtonBar-Item]:first-child > [_ButtonBar-Button] {
+[_ButtonBar-Item]:first-child > [_Button] {
   border-right: none;
 }
 
-[_ButtonBar-Item]:last-child > [_ButtonBar-Button] {
+[_ButtonBar-Item]:last-child > [_Button] {
   border-left: none;
 }
 
-[_ButtonBar-Button] {
+[_ButtonBar-Item] > [_Button] {
   /*@extend [_Button];*/
   border-radius: inherit;
 }
 
-[_ButtonBar-Button]:focus {
+[_ButtonBar-Item] > [_Button]:focus {
   /*@extend [_Button]:focus*/
   z-index: 1;
 }
@@ -174,13 +174,13 @@
   markup:
     <div _ButtonBar>
       <div _ButtonBar-Item>
-        <button _ButtonBar-Button="large">One</button>
+        <button _Button="large">One</button>
       </div>
       <div _ButtonBar-Item>
-        <button _ButtonBar-Button="large">Two</button>
+        <button _Button="large">Two</button>
       </div>
       <div _ButtonBar-Item>
-        <button _ButtonBar-Button="large">Three</button>
+        <button _Button="large">Three</button>
       </div>
     </div>
   tags:
@@ -194,7 +194,7 @@
     - large
 */
 
-[_ButtonBar-Button~="large"] {
+[_ButtonBar-Item] > [_Button~="large"] {
   border-radius: inherit;
 }
 

@@ -80,7 +80,7 @@
             <header>
               <h2>Button Bar</h2>
             </header>
-            <section class="component"><div _ButtonBar>  <div _ButtonBar-Item>    <button _ButtonBar-Button>One</button>  </div>  <div _ButtonBar-Item>    <button _ButtonBar-Button>Two</button>  </div>  <div _ButtonBar-Item>    <button _ButtonBar-Button>Three</button>  </div></div></section>
+            <section class="component"><div _ButtonBar>  <div _ButtonBar-Item>    <button _Button>One</button>  </div>  <div _ButtonBar-Item>    <button _Button>Two</button>  </div>  <div _ButtonBar-Item>    <button _Button>Three</button>  </div></div></section>
             <section class="examples">
               <h4>Examples</h4>
               <ul>
@@ -92,7 +92,7 @@
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;div _ButtonBar&gt;  &lt;div _ButtonBar-Item&gt;    &lt;button _ButtonBar-Button&gt;One&lt;/button&gt;  &lt;/div&gt;  &lt;div _ButtonBar-Item&gt;    &lt;button _ButtonBar-Button&gt;Two&lt;/button&gt;  &lt;/div&gt;  &lt;div _ButtonBar-Item&gt;    &lt;button _ButtonBar-Button&gt;Three&lt;/button&gt;  &lt;/div&gt;&lt;/div&gt;</code></pre>
+                  <pre class="html"><code data-language="html">&lt;div _ButtonBar&gt;  &lt;div _ButtonBar-Item&gt;    &lt;button _Button&gt;One&lt;/button&gt;  &lt;/div&gt;  &lt;div _ButtonBar-Item&gt;    &lt;button _Button&gt;Two&lt;/button&gt;  &lt;/div&gt;  &lt;div _ButtonBar-Item&gt;    &lt;button _Button&gt;Three&lt;/button&gt;  &lt;/div&gt;&lt;/div&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
@@ -107,20 +107,20 @@
   border-bottom-right-radius: 4px;
 }
 
-[_ButtonBar-Item]:first-child &gt; [_ButtonBar-Button] {
+[_ButtonBar-Item]:first-child &gt; [_Button] {
   border-right: none;
 }
 
-[_ButtonBar-Item]:last-child &gt; [_ButtonBar-Button] {
+[_ButtonBar-Item]:last-child &gt; [_Button] {
   border-left: none;
 }
 
-[_ButtonBar-Button] {
+[_ButtonBar-Item] &gt; [_Button] {
   /*@extend [_Button];*/
   border-radius: inherit;
 }
 
-[_ButtonBar-Button]:focus {
+[_ButtonBar-Item] &gt; [_Button]:focus {
   /*@extend [_Button]:focus*/
   z-index: 1;
 }
@@ -133,18 +133,18 @@
             <header>
               <h2>Large Button Bar</h2>
             </header>
-            <section class="component"><div _ButtonBar>  <div _ButtonBar-Item>    <button _ButtonBar-Button="large">One</button>  </div>  <div _ButtonBar-Item>    <button _ButtonBar-Button="large">Two</button>  </div>  <div _ButtonBar-Item>    <button _ButtonBar-Button="large">Three</button>  </div></div></section>
+            <section class="component"><div _ButtonBar>  <div _ButtonBar-Item>    <button _Button="large">One</button>  </div>  <div _ButtonBar-Item>    <button _Button="large">Two</button>  </div>  <div _ButtonBar-Item>    <button _Button="large">Three</button>  </div></div></section>
             <footer>
               <div class="showcode"><a href="#">Show code snippets</a></div>
               <section class="code">
                 <div>
                   <h3>HTML</h3>
-                  <pre class="html"><code data-language="html">&lt;div _ButtonBar&gt;  &lt;div _ButtonBar-Item&gt;    &lt;button _ButtonBar-Button=&quot;large&quot;&gt;One&lt;/button&gt;  &lt;/div&gt;  &lt;div _ButtonBar-Item&gt;    &lt;button _ButtonBar-Button=&quot;large&quot;&gt;Two&lt;/button&gt;  &lt;/div&gt;  &lt;div _ButtonBar-Item&gt;    &lt;button _ButtonBar-Button=&quot;large&quot;&gt;Three&lt;/button&gt;  &lt;/div&gt;&lt;/div&gt;</code></pre>
+                  <pre class="html"><code data-language="html">&lt;div _ButtonBar&gt;  &lt;div _ButtonBar-Item&gt;    &lt;button _Button=&quot;large&quot;&gt;One&lt;/button&gt;  &lt;/div&gt;  &lt;div _ButtonBar-Item&gt;    &lt;button _Button=&quot;large&quot;&gt;Two&lt;/button&gt;  &lt;/div&gt;  &lt;div _ButtonBar-Item&gt;    &lt;button _Button=&quot;large&quot;&gt;Three&lt;/button&gt;  &lt;/div&gt;&lt;/div&gt;</code></pre>
                 </div>
                 <div>
                   <h3>CSS</h3>
                   <pre class="css"><code data-language="css">
-[_ButtonBar-Button~=&quot;large&quot;] {
+[_ButtonBar-Item] &gt; [_Button~=&quot;large&quot;] {
   border-radius: inherit;
 }
 
